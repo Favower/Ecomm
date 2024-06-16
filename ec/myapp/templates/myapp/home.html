@@ -20,11 +20,11 @@
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
+      <span class="visually-hidden">Назад</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
+      <span class="visually-hidden">Дальше</span>
     </button>
   </div>
 {% endblock banner-slider %}
@@ -32,11 +32,11 @@
 
 {% block Information %}
 <div class="container">
-    <div class="row bg-success text-center p-5 text-white border-bottom shadow">
-        <h1>Products</h1>
-        <small class= "fs-5">Model form views provide a form_valid() implementation that saves the model automatically. You can override this if you have any special requirements; see below for examples.
-        You don’t even need to provide a success_url for CreateView or UpdateView - they will use get_absolute_url() on the model object if available.
-        If you want to use a custom ModelForm (for instance to add extra validation), set form_class on your view.</small>
+    <div class="row bg-secondary text-center p-5 text-white border-bottom shadow">
+        <h1>Продукты</h1>
+        <small class= "fs-5">Наши молочные продукты - это залог здоровья и энергии для всей семьи. 
+          Мы тщательно контролируем каждый этап производства, чтобы вы могли наслаждаться вкусными и полезными продуктами. 
+          Откройте для себя наше разнообразие и найдите свои любимые молочные лакомства!</small>
     </div>
 </div>
 {% endblock Information %}
@@ -44,7 +44,7 @@
 
 {% block main-content %}
     <div class="container">
-        <h2 class="text-center">Dairy Products</h2>
+        <h2 class="text-center">Молочные продукты</h2>
         <br><br>
 
         <div class="row container">
@@ -56,7 +56,7 @@
                 <a href="{% url 'category' 'GH' %}">
                   <div class="goodnessseccont text-center">
                       <img src="{% static 'myapp/images/product/buffalo-ghee.png' %}" class="img-responsive center-block" alt="">
-                      <p class="mlkpro">Ghee</p>
+                      <p class="mlkpro">Топлённое масло</p>
                   </div>
                 </a>
             </div>
@@ -70,7 +70,7 @@
                   <a href="{% url 'category' 'CR' %}">
                     <div class="goodnessseccont text-center">
                         <img src="{% static 'myapp/images/product/curd-total.png' %}" class="img-responsive center-block" alt="">
-                        <p class="mlkpro">Curd</p>
+                        <p class="mlkpro">Творог</p>
                     </div>
                   </a>
               </div>
@@ -84,7 +84,7 @@
                 <a href="{% url 'category' 'IC' %}">
                   <div class="goodnessseccont text-center">
                       <img src="{% static 'myapp/images/product/kulfi.png' %}" class="img-responsive center-block" alt="">
-                      <p class="mlkpro">Ice Creams</p>
+                      <p class="mlkpro">Мороженое</p>
                   </div>
                 </a>
             </div>
@@ -102,7 +102,7 @@
                 <a href="{% url 'category' 'MS' %}">
                   <div class="goodnessseccont text-center">
                       <img src="{% static 'myapp/images/product/milk-shake-chocolate.png' %}" class="img-responsive center-block" alt="">
-                      <p class="mlkpro">Milkshake</p>
+                      <p class="mlkpro">Молочный коктейль</p>
                   </div>
                 </a>
             </div>
@@ -116,7 +116,7 @@
                   <a href="{% url 'category' 'ML' %}">
                     <div class="goodnessseccont text-center">
                         <img src="{% static 'myapp/images/product/cow-milk.png' %}" class="img-responsive center-block" alt="">
-                        <p class="mlkpro">Milk</p>
+                        <p class="mlkpro">Молоко</p>
                     </div>
                   </a>
               </div>
@@ -130,7 +130,7 @@
                 <a href="{% url 'category' 'IC' %}">
                   <div class="goodnessseccont text-center">
                       <img src="{% static 'myapp/images/product/icebars.png' %}" class="img-responsive center-block" alt="">
-                      <p class="mlkpro">Icebar</p>
+                      <p class="mlkpro">Ледяной бар</p>
                   </div>
                 </a>
             </div>

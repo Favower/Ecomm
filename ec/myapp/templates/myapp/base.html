@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
-    <title> Dairy Products | {% block title %} {% endblock title %} </title>
+    <title> Молочные продукты | {% block title %} {% endblock title %} </title>
 </head>
 <body>
      
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
             <img src="{% static "myapp/images/Neel.png" %}" width="70" height ="70" />
@@ -32,44 +32,44 @@
               </li> 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+                  Наши продукты
                 </a>
 
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="{% url 'category' 'ML' %}">Milk</a></li>
-                  <li><a class="dropdown-item" href="{% url 'category' 'CR' %}">Curd</a></li>
-                  <li><a class="dropdown-item" href="{% url 'category' 'MS' %}">Milkshake</a></li>
-                  <li><a class="dropdown-item" href="{% url 'category' 'LC' %}">Lassi</a></li>
-                  <li><a class="dropdown-item" href="{% url 'category' 'GH' %}">Ghee</a></li>
-                  <li><a class="dropdown-item" href="{% url 'category' 'PN' %}">Paneer</a></li>
-                  <li><a class="dropdown-item" href="{% url 'category' 'CZ' %}">Cheese</a></li>
-                  <li><a class="dropdown-item" href="{% url 'category' 'IC' %}">Ice-creams </a></li>
+                  <li><a class="dropdown-item" href="{% url 'category' 'ML' %}">Молоко</a></li>
+                  <li><a class="dropdown-item" href="{% url 'category' 'CR' %}">Творог</a></li>
+                  <li><a class="dropdown-item" href="{% url 'category' 'MS' %}">Милкшейк</a></li>
+                  <li><a class="dropdown-item" href="{% url 'category' 'LC' %}">Напитки</a></li>
+                  <li><a class="dropdown-item" href="{% url 'category' 'GH' %}">Топлёное масло</a></li>
+                  <li><a class="dropdown-item" href="{% url 'category' 'PN' %}">Панир</a></li>
+                  <li><a class="dropdown-item" href="{% url 'category' 'CZ' %}">Сыр</a></li>
+                  <li><a class="dropdown-item" href="{% url 'category' 'IC' %}">Мороженое</a></li>
 
                 </ul>
 
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white " href="{% url 'about' %}">About Us</a>
+                <a class="nav-link text-white " href="{% url 'about' %}">О нас</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link text-white " href="{% url 'contact' %}">Contact Us</a>
+                <a class="nav-link text-white " href="{% url 'contact' %}">Связаться с нами</a>
               </li>
               
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <button class="btn btn-outline-info" type="submit">Поиск</button>
             </form>
           </div>
           <ul class= "navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item dropdown mx-2">
                 <a class="nav-link dropdown-toggle text-white" href="#"
                 id="profileDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">Amir</a>
+                aria-expanded="false">Пользователь</a>
                 <ul class="dropdown-menu" aria-labelledby="profileDropdown">
                     <li><a class="dropdown-item" href="{% url 'profile' %}">Аккант</a></li>
-                    <li><a class="dropdown-item" href="#">Orders</a></li>
+                    <li><a class="dropdown-item" href="#">Заказы</a></li>
                     <li><a class="dropdown-item" href="{% url 'passwordchange' %}">Сменить пароль</a></li>
                     <li><a class="dropdown-item" href="{% url 'logout' %}">Выйти</a></li>  
                 </ul> 
@@ -78,14 +78,14 @@
                 <a href="{% url 'showcart' %}" class= "nav-link text-white">Корзина</a>
             </li>
             <li class="nav-item mx-2">
-                <a href="#" class= "nav-link text-white">Wishlist 4</a>
+                <a href="#" class= "nav-link text-white">Избранные</a>
             </li>
             {% else %}
             <li class="nav-item mx-2">
-                <a href="{% url 'login' %}" class= "nav-link text-white">Login</a>
+                <a href="{% url 'login' %}" class= "nav-link text-white">Войти</a>
             </li>
             <li class="nav-item mx-2">
-                <a href="{% url 'customerregistration' %}" class= "nav-link text-white">Registration</a>
+                <a href="{% url 'customerregistration' %}" class= "nav-link text-white">Регистрация</a>
             </li>
             {% endif %}
          </ul>
@@ -97,8 +97,8 @@
       {% block main-content %} {% endblock main-content %}
       {% block paymant-gateway %}{% endblock paymant-gateway %}
 
-      <footer class= "container-fluid fixed-bottom bg-success text-center p-2 mt-5">
-        Copyright || Develop by : Ama
+      <footer class= "container-fluid fixed-bottom bg-secondary text-center p-2 mt-5">
+        Учебный проект AU
       </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
