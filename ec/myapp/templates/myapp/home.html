@@ -1,0 +1,145 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block banner-slider %}
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'myapp/images/banner/b1.jpg' %}" class="d-block w-100" alt="banner-image">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'myapp/images/banner/b2.jpg' %}" class="d-block w-100" alt="banner-image">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'myapp/images/banner/b3.jpg' %}" class="d-block w-100" alt="banner-image">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'myapp/images/banner/b4.jpg' %}" class="d-block w-100" alt="banner-image">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+{% endblock banner-slider %}
+
+
+{% block Information %}
+<div class="container">
+    <div class="row bg-success text-center p-5 text-white border-bottom shadow">
+        <h1>Products</h1>
+        <small class= "fs-5">Model form views provide a form_valid() implementation that saves the model automatically. You can override this if you have any special requirements; see below for examples.
+        You don’t even need to provide a success_url for CreateView or UpdateView - they will use get_absolute_url() on the model object if available.
+        If you want to use a custom ModelForm (for instance to add extra validation), set form_class on your view.</small>
+    </div>
+</div>
+{% endblock Information %}
+
+
+{% block main-content %}
+    <div class="container">
+        <h2 class="text-center">Dairy Products</h2>
+        <br><br>
+
+        <div class="row container">
+          <div class="col-md-4 col-sm-4 mi-go wow fadeInUp"
+          data-wow-duration="1s" data-wow-delay="0.6s"
+          style="animation-duration: 1s; animation-deley: 0.6s;
+          animation-name: none;">
+            <div class="goodnesssec buttermilk smbg">
+                <a href="{% url 'category' 'GH' %}">
+                  <div class="goodnessseccont text-center">
+                      <img src="{% static 'myapp/images/product/buffalo-ghee.png' %}" class="img-responsive center-block" alt="">
+                      <p class="mlkpro">Ghee</p>
+                  </div>
+                </a>
+            </div>
+          </div> 
+      
+            <div class="col-md-4 col-sm-4 mi-go wow fadeInUp"
+            data-wow-duration="1s" data-wow-delay="0.6s"
+            style="animation-duration: 1s; animation-deley: 0.6s;
+            animation-name: none;">
+              <div class="goodnesssec buttermilk curdbgpro">
+                  <a href="{% url 'category' 'CR' %}">
+                    <div class="goodnessseccont text-center">
+                        <img src="{% static 'myapp/images/product/curd-total.png' %}" class="img-responsive center-block" alt="">
+                        <p class="mlkpro">Curd</p>
+                    </div>
+                  </a>
+              </div>
+            </div> 
+        
+          <div class="col-md-4 col-sm-4 mi-go wow fadeInUp"
+          data-wow-duration="1s" data-wow-delay="0.6s"
+          style="animation-duration: 1s; animation-deley: 0.6s;
+          animation-name: none;">
+            <div class="goodnesssec buttermilk buttermilk">
+                <a href="{% url 'category' 'IC' %}">
+                  <div class="goodnessseccont text-center">
+                      <img src="{% static 'myapp/images/product/kulfi.png' %}" class="img-responsive center-block" alt="">
+                      <p class="mlkpro">Ice Creams</p>
+                  </div>
+                </a>
+            </div>
+          </div> 
+        </div>
+
+        <br><br>
+
+        <div class="row container">
+          <div class="col-md-4 col-sm-4 mi-go wow fadeInUp"
+          data-wow-duration="1s" data-wow-delay="0.6s"
+          style="animation-duration: 1s; animation-deley: 0.6s;
+          animation-name: none;">
+            <div class="goodnesssec buttermilk smbg">
+                <a href="{% url 'category' 'MS' %}">
+                  <div class="goodnessseccont text-center">
+                      <img src="{% static 'myapp/images/product/milk-shake-chocolate.png' %}" class="img-responsive center-block" alt="">
+                      <p class="mlkpro">Milkshake</p>
+                  </div>
+                </a>
+            </div>
+          </div> 
+      
+            <div class="col-md-4 col-sm-4 mi-go wow fadeInUp"
+            data-wow-duration="1s" data-wow-delay="0.6s"
+            style="animation-duration: 1s; animation-deley: 0.6s;
+            animation-name: none;">
+              <div class="goodnesssec buttermilk curdbgpro">
+                  <a href="{% url 'category' 'ML' %}">
+                    <div class="goodnessseccont text-center">
+                        <img src="{% static 'myapp/images/product/cow-milk.png' %}" class="img-responsive center-block" alt="">
+                        <p class="mlkpro">Milk</p>
+                    </div>
+                  </a>
+              </div>
+            </div> 
+        
+          <div class="col-md-4 col-sm-4 mi-go wow fadeInUp"
+          data-wow-duration="1s" data-wow-delay="0.6s"
+          style="animation-duration: 1s; animation-deley: 0.6s;
+          animation-name: none;">
+            <div class="goodnesssec buttermilk buttermilk">
+                <a href="{% url 'category' 'IC' %}">
+                  <div class="goodnessseccont text-center">
+                      <img src="{% static 'myapp/images/product/icebars.png' %}" class="img-responsive center-block" alt="">
+                      <p class="mlkpro">Icebar</p>
+                  </div>
+                </a>
+            </div>
+          </div> 
+        </div>
+
+
+        
+    </div>  
+   
+ <br/><br/>   
+{% endblock main-content %}

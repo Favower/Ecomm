@@ -1,0 +1,55 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %} About {% endblock title %}
+
+
+{% block banner-slider %}
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'myapp/images/banner/b1.jpg' %}" class="d-block w-100" alt="banner-image">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'myapp/images/banner/b2.jpg' %}" class="d-block w-100" alt="banner-image">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'myapp/images/banner/b3.jpg' %}" class="d-block w-100" alt="banner-image">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'myapp/images/banner/b4.jpg' %}" class="d-block w-100" alt="banner-image">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+{% endblock banner-slider %}
+
+{% block main-content %}
+<div class="container mt-3">
+    <br>
+    <h2 class="text-center">About Us</h2>
+    </br>
+    <div class="row container">
+        <p class="fs-4 text-center">Страница «О компании» или «О нас» часто подразумевается «по умолчанию»: вроде это же очевидно, зачем она нужна. С таким подходом страница получается безликой: к тексту можно подставить название другой компании или бренда — смысл не поменяется.</p>
+    </div>
+    <h2 class="text-center">Mission</h2>
+    <br>
+    <div class="row container">
+        <p class="fs-4 text-center">Ми́ссия (англ. mission) — основная цель организации, смысл её существования. Миссия — одно из основополагающих понятий стратегического управления. Разные учёные давали различные формулировки миссии.
+
+            «Миссия — смысл существования компании с позиции удовлетворения потребностей клиентов, реализации конкурентных преимуществ, мотивации сотрудников фирмы»
+            «Миссия — это философия и предназначение, смысл существования организации» (Виханский О. С.).{Лекция по Основам Менеджмента ВШБ}
+            "Миссия - фокус на ценности" (Шмелев И.В., Ивано)
+            Миссия организации определяется на этапе становления организации и редко меняется. В качестве примера реальной миссии компании мирового уровня можно привести миссию компании Matsushita, которую Коносуке Мацусита определял как борьбу с бедностью общества и повышение его благосостояния[1].
+        </p>
+    </div>
+</div>
+<br><br>
+{% endblock main-content %} 
+

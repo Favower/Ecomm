@@ -1,0 +1,42 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Регистрация пользователя{% endblock title %}
+{% block main-content %}
+
+<div class='container'>
+    <div class='row my-3'>
+        <div class="col-sm-6 offset-sm-3">
+            <h3>Форма Регистрации Пользователя</h3>
+            <hr> 
+            <form action="" method="post" novalidate class="shadow p-5">
+                {% csrf_token %}
+                {% for fm in form %}
+                    {{fm.label_tag}} {{fm}} <small class="text-danger">{{fm.errors|striptags}}</small>
+                    <br>
+                {% endfor %}
+                <input type="submit" value="Submit" class="btn btn-primary"> <br>
+
+                <div class="text-center text-pprimary fw-bold">
+                    <small>Существует учетная запись? <a href="{% url 'login' %}"
+                        class="text-danger">Войти</a></small>
+                </div>
+
+                {% if form.non_field_errors %}
+                    {% for error in form.non_field_errors %}
+                        <p class="alert alert-danger my-3">{{error}}</p>
+                    {% endfor %}
+                {% endif %}
+                <br>
+                {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{message.tags}} text-center" role="alert">
+                        {{ message }}                      
+                    </div>
+                {% endfor %}
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock main-content %}
